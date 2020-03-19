@@ -16,7 +16,6 @@
    Get Server Details
 #>
 Function Get-AdServers{
-#Requires -Modules ActiveDirectory
     [CmdletBinding()] #Enable all the default paramters, including -Verbose
     [Alias()]
     Param(
