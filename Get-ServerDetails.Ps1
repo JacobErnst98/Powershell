@@ -15,7 +15,7 @@
 .FUNCTIONALITY
    Get Server Details
 #>
-Function Get-AdServers{
+Function Get-ServerDetails{
     [CmdletBinding()] #Enable all the default paramters, including -Verbose
     [Alias()]
     Param(
