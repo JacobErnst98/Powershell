@@ -23,8 +23,6 @@ Vital Project has no direct claim on this code.
 According to stackoverflow TOS and the date of the original post the license would be
 https://creativecommons.org/licenses/by-sa/3.0/
 
-#> 
-<#
 .DESCRIPTION This function basically gets the week number based on the nth Wednesday of the year and uses Sunday as the first day of the week (I haven't put time into changing that since this is actually the convention my company uses) 
 #>
 Function Get-WeekOfYear($date)
