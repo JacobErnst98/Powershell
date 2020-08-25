@@ -22,19 +22,26 @@ This solution was located on stackoverflow and written by a third party.
 Vital Project has no direct claim on this code.
 According to stackoverflow TOS and the date of the original post the license would be
 https://creativecommons.org/licenses/by-sa/3.0/
-
+#>
+<#
 .DESCRIPTION This function basically gets the week number based on the nth Wednesday of the year and uses Sunday as the first day of the week (I haven't put time into changing that since this is actually the convention my company uses) 
 #>
-Function Get-WeekOfYear($date)
+Function Get-WeekOfYear
 {
-    # Note: first day of week is Sunday
-    $intDayOfWeek = (get-date -date $date).DayOfWeek.value__
-    $daysToWednesday = (3 - $intDayOfWeek)
-    $wednesdayCurrentWeek = ((get-date -date $date)).AddDays($daysToWednesday)
+    param(
+    [parameter(ValueFromPipeline)]$date
+    )
+    Process {
+        # Note: first day of week is Sunday
+        $intDayOfWeek = (get-date -date $date).DayOfWeek.value__
+        $daysToWednesday = (3 - $intDayOfWeek)
+        $wednesdayCurrentWeek = ((get-date -date $date)).AddDays($daysToWednesday)
 
-    # %V basically gets the amount of '7 days' that have passed this year (starting at 1)
-    $weekNumber = get-date -date $wednesdayCurrentWeek -uFormat %V
+        # %V basically gets the amount of '7 days' that have passed this year (starting at 1)
+        $weekNumber = get-date -date $wednesdayCurrentWeek -uFormat %V
 
-    return $weekNumber
+        return $weekNumber
+    }
 }
+
 
