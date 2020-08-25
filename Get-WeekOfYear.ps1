@@ -1,8 +1,10 @@
 <#PSScriptInfo
 
-.AUTHOR Deruijter
+.AUTHOR
+Deruijter
 
-.PROJECTURI https://stackoverflow.com/questions/23472027/how-is-first-day-of-week-determined-in-powershell/23475495#23475495
+.PROJECTURI
+https://stackoverflow.com/questions/23472027/how-is-first-day-of-week-determined-in-powershell/23475495#23475495
 
 .RELEASENOTES
 Apparently powershell parameter -uformat %V doesn't actually use any kind of 'first day of week' rule. It actually just shows the amount of '7 days' that have passed since the beginning of the year (starting at 1).
@@ -20,7 +22,6 @@ This solution was located on stackoverflow and written by a third party.
 Vital Project has no direct claim on this code.
 According to stackoverflow TOS and the date of the original post the license would be
 https://creativecommons.org/licenses/by-sa/3.0/
-
 
 #> 
 <#
